@@ -1,0 +1,45 @@
+{
+  "name": "dsh-no-shimmer",
+  "version": "0.1.0",
+  "description": "关闭 Harness 界面「运行中 / 思考中」的扫光动画，避免 mask-image 每帧主线程重栅格化。",
+  "license": "MIT",
+  "author": "QAQWWQ",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/QAQWWQ/dsh-no-shimmer.git"
+  },
+  "homepage": "https://github.com/QAQWWQ/dsh-no-shimmer#readme",
+  "bugs": {
+    "url": "https://github.com/QAQWWQ/dsh-no-shimmer/issues"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "shimmer",
+    "animation",
+    "performance"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": []
+    }
+  }
+}

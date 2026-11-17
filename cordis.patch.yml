@@ -1,0 +1,7 @@
+# dsh bundle patch: 只插入 no-shimmer 本身。
+#
+# 它没有 host 端行为，全部工作发生在 Web 客户端：注入一段 CSS，
+# 把「运行中 / 思考中」那层扫光动画停掉。
+- insert:
+    - id: dsh-no-shimmer
+      name: 'dsh-no-shimmer'
